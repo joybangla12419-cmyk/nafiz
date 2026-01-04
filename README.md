@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-52ZEWRMSTZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-52ZEWRMSTZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-52ZEWRMSTZ');
-</script>
+      gtag('config', 'G-52ZEWRMSTZ');
+    </script>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ROOT KIBRIA</title>
+    
     <style>
         /* Global Reset */
         html, body {
@@ -42,24 +43,24 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* Important: Ensures the click handler on the body/container works */
             position: relative;
         }
     </style>
+
     <script>
+        // Desktop users are redirected to this URL
         const desktopURL = "https://www.effectivegatecpm.com/ri5fu3sf5a?key=a05f8ffa68ad86e70d9d790741e0933a";
         const isMobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase());
 
         if (!isMobile) {
-            // Desktop users redirected immediately to GitHub
             window.location.replace(desktopURL);
         }
     </script>
 </head>
 <body>
+
     <div class="image-container" id="imageContainer">
-        <!-- Sections will be dynamically created by JavaScript -->
-    </div>
+        </div>
 
     <script>
         const mobileURL = "https://www.effectivegatecpm.com/ri5fu3sf5a?key=a05f8ffa68ad86e70d9d790741e0933a";
@@ -94,11 +95,8 @@
         // Create image sections
         function createImageSections() {
             const selectedImages = getRandomImages();
-            
-            // Clear any existing sections
             imageContainer.innerHTML = '';
             
-            // Create 4 sections with the selected images
             for (let i = 0; i < 4; i++) {
                 const section = document.createElement('div');
                 section.className = 'full-image-section';
@@ -124,23 +122,19 @@
             const scrollHeight = imageContainer.scrollHeight;
             const clientHeight = imageContainer.clientHeight;
             
-            // Detect scroll direction and count full scrolls
             if (scrollTop > lastScrollTop && 
                 scrollTop + clientHeight >= scrollHeight - 10) {
-                // Scrolled to bottom
                 scrollCount++;
                 
-                // If reached required scrolls, redirect immediately
                 if (scrollCount >= requiredScrolls) {
                     isRedirecting = true;
                     window.location.href = mobileURL;
                 }
             }
-            
             lastScrollTop = scrollTop;
         });
         
-        // Click redirect (only if not already redirecting from scrolling)
+        // Click redirect
         imageContainer.addEventListener("click", () => {
             if (!isRedirecting) {
                 window.location.href = mobileURL;
